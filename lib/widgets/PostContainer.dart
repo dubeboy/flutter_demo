@@ -31,7 +31,10 @@ class PostContainer extends StatelessWidget {
           ),
         ),
         post.imageUrl != null
-            ? CachedNetworkImage(imageUrl: post.imageUrl)
+            ? Padding(
+          padding: EdgeInsets.only(top: 4.0),
+            child: CachedNetworkImage(imageUrl: post.imageUrl)
+            )
             : const SizedBox.shrink()
       ]),
     );
